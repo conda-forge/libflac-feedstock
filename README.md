@@ -14,14 +14,16 @@ Free Lossless Audio Codec.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/libflac-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/libflac-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/libflac-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/libflac-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/libflac-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/libflac-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/libflac-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/libflac-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/libflac-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/libflac-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/libflac-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/libflac-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/libflac/badges/version.svg)](https://anaconda.org/conda-forge/libflac)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/libflac/badges/downloads.svg)](https://anaconda.org/conda-forge/libflac)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-libflac-green.svg)](https://anaconda.org/conda-forge/libflac) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/libflac.svg)](https://anaconda.org/conda-forge/libflac) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/libflac.svg)](https://anaconda.org/conda-forge/libflac) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/libflac.svg)](https://anaconda.org/conda-forge/libflac) |
 
 Installing libflac
 ==================
@@ -66,6 +68,7 @@ To manage the continuous integration and simplify feedstock maintenance
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
+For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
