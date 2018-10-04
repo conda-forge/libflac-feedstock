@@ -33,8 +33,6 @@ test:
   requires:
     - python {{ environ['PY_VER'] + '*' }}  # [win]
   commands:
-    - test -f $PREFIX/lib/libFLAC.la  # [unix]
-    - test -f $PREFIX/lib/libFLAC++.la  # [unix]
     - test -f $PREFIX/bin/flac  # [unix]
     - test -f $PREFIX/bin/metaflac  # [unix]
     - test -f $PREFIX/lib/libFLAC.dylib  # [osx]
