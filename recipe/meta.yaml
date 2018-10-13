@@ -30,8 +30,6 @@ requirements:
     - libogg 1.3.*
 
 test:
-  requires:
-    - python {{ environ['PY_VER'] + '*' }}  # [win]
   commands:
     - test -f $PREFIX/bin/flac  # [unix]
     - test -f $PREFIX/bin/metaflac  # [unix]
