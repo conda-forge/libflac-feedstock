@@ -23,7 +23,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - pkgconfig  # [unix]
+    - pkg-config  # [unix]
     - gettext  # [unix]
     - libogg 1.3.*
   run:
