@@ -1,0 +1,8 @@
+diff --git a/src/test_streams/CMakeLists.txt b/src/test_streams/CMakeLists.txt
+index f9fafb9d..42ba64d8 100644
+--- a/src/test_streams/CMakeLists.txt
++++ b/src/test_streams/CMakeLists.txt
+@@ -1,2 +1,2 @@
+ add_executable(test_streams main.c)
+-target_link_libraries(test_streams FLAC grabbag)
++target_link_libraries(test_streams FLAC grabbag m)

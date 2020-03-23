@@ -1,0 +1,14 @@
+diff --git a/src/flac/CMakeLists.txt b/src/flac/CMakeLists.txt
+index ea4f6873..ff53687b 100644
+--- a/src/flac/CMakeLists.txt
++++ b/src/flac/CMakeLists.txt
+@@ -15,7 +15,8 @@ target_link_libraries(flacapp
+     FLAC
+     getopt
+     replaygain_synthesis
+-    utf8)
++    utf8
++    m)
+ if(TARGET win_utf8_io)
+     target_link_libraries(flacapp win_utf8_io)
+ endif()
