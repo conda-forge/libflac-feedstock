@@ -1,0 +1,13 @@
+diff --git a/src/metaflac/CMakeLists.txt b/src/metaflac/CMakeLists.txt
+index 77eafbdb..682952ea 100644
+--- a/src/metaflac/CMakeLists.txt
++++ b/src/metaflac/CMakeLists.txt
+@@ -9,7 +9,7 @@ add_executable(metaflac
+     options.c
+     usage.c
+     utils.c)
+-target_link_libraries(metaflac FLAC getopt utf8)
++target_link_libraries(metaflac FLAC getopt utf8 m)
+ if(TARGET win_utf8_io)
+     target_link_libraries(metaflac win_utf8_io)
+ endif()

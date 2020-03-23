@@ -1,13 +1,11 @@
 #!/bin/bash
-if [ `uname` == Darwin ]; then
-	export LDFLAGS="${LDFLAGS} -Wl,-rpath,$PREFIX/lib"
-fi
 
-./autogen.sh
-./configure --prefix=${PREFIX} --enable-sse --disable-dependency-tracking
+cmake -D CMAKE_BUILD_TYPE=Release     \
+      -D CMAKE_INSTALL_PREFIX=$PREFIX \
+      -D CMAKE_INSTALL_LIBDIR=lib     \
+      -D BUILD_SHARED_LIBS=ON         \
+      -D BUILD_EXAMPLES=OFF           \
+      -D BUILD_DOCS=OFF           \
+      $SRC_DIR
 
-make
-if [ `uname` == Darwin ]; then
-	make check
-fi
 make install
