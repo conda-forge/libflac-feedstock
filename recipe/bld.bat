@@ -5,7 +5,7 @@ cmake -G "NMake Makefiles" ^
   -D CMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
   -D BUILD_SHARED_LIBS=ON ^
   -D BUILD_EXAMPLES=OFF ^
-  -D BUILD_DOCS=OFF ^
+  -D BUILD_DOXYGEN=OFF ^
   %SRC_DIR%
 if errorlevel 1 exit 1
 
