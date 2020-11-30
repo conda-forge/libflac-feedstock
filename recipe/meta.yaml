@@ -14,9 +14,10 @@ source:
     - add_libm_to_flac.patch          # [linux]
     - add_libm_to_metaflac.patch      # [linux]
     - add_libm_to_test_streams.patch  # [linux]
+    - fix_pkgconfig.patch
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage('libflac', max_pin='x.x') }}
 

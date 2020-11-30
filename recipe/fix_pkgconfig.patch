@@ -1,0 +1,39 @@
+diff --git a/src/libFLAC++/CMakeLists.txt b/src/libFLAC++/CMakeLists.txt
+index d6e3dfd..61d3089 100644
+--- a/src/libFLAC++/CMakeLists.txt
++++ b/src/libFLAC++/CMakeLists.txt
+@@ -2,6 +2,7 @@ set(prefix "${CMAKE_INSTALL_PREFIX}")
+ set(exec_prefix "${CMAKE_INSTALL_PREFIX}")
+ set(libdir "${CMAKE_INSTALL_FULL_LIBDIR}")
+ set(includedir "${CMAKE_INSTALL_FULL_INCLUDEDIR}")
++set(VERSION "1.3.3")
+ configure_file(flac++.pc.in flac++.pc @ONLY)
+ 
+ check_cxx_source_compiles("
+@@ -42,4 +43,4 @@ install(TARGETS FLAC++ EXPORT targets
+     LIBRARY DESTINATION "${CMAKE_INSTALL_LIBDIR}/"
+     RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}/")
+ install(FILES "${CMAKE_CURRENT_BINARY_DIR}/flac++.pc"
+-    DESTINATION "${CMAKE_INSTALL_DATAROOTDIR}/pkgconfig")
++    DESTINATION "${CMAKE_INSTALL_LIBDIR}/pkgconfig")
+diff --git a/src/libFLAC/CMakeLists.txt b/src/libFLAC/CMakeLists.txt
+index a6e0c01..1a7fc88 100644
+--- a/src/libFLAC/CMakeLists.txt
++++ b/src/libFLAC/CMakeLists.txt
+@@ -52,6 +52,10 @@ set(prefix "${CMAKE_INSTALL_PREFIX}")
+ set(exec_prefix "${CMAKE_INSTALL_PREFIX}")
+ set(libdir "${CMAKE_INSTALL_FULL_LIBDIR}")
+ set(includedir "${CMAKE_INSTALL_FULL_INCLUDEDIR}")
++set(VERSION "1.3.3")
++if (OGG_FOUND)
++    set(OGG_PACKAGE "ogg")
++endif()
+ configure_file(flac.pc.in flac.pc @ONLY)
+ 
+ include_directories("include")
+@@ -118,4 +122,4 @@ install(TARGETS FLAC EXPORT targets
+     LIBRARY DESTINATION "${CMAKE_INSTALL_LIBDIR}/"
+     RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}/")
+ install(FILES "${CMAKE_CURRENT_BINARY_DIR}/flac.pc"
+-    DESTINATION "${CMAKE_INSTALL_DATADIR}/pkgconfig")
++    DESTINATION "${CMAKE_INSTALL_LIBDIR}/pkgconfig")
