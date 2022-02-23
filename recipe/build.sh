@@ -11,8 +11,4 @@ cmake ${CMAKE_ARGS} -D CMAKE_BUILD_TYPE=Release     \
 
 make -j${CPU_COUNT}
 
-if [[ "$CONDA_BUILD_CROSS_COMPILATION" != "1" ]]; then
-    ctest -V
-fi
-
 make install
