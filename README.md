@@ -9,6 +9,8 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/libflac-feedsto
 
 Summary: Flac audio format
 
+Development: https://gitlab.xiph.org/xiph/flac
+
 Documentation: https://wiki.xiph.org/
 
 Free Lossless Audio Codec.
@@ -176,4 +178,5 @@ Feedstock Maintainers
 
 * [@dschreij](https://github.com/dschreij/)
 * [@martinRenou](https://github.com/martinRenou/)
+* [@matthiasdiener](https://github.com/matthiasdiener/)
 
