@@ -1,23 +1,17 @@
 {% set name = "flac" %}
-{% set version = "1.3.3" %}
-{% set sha256 = "668cdeab898a7dd43cf84739f7e1f3ed6b35ece2ef9968a5c7079fe9adfe1689" %}
+{% set version = "1.3.4" %}
+{% set sha256 = "53e9dbe3ae54a9f42c1e65afe7f516c02d8393c0c6d56bc455c15e1e044069a9" %}
 
 package:
   name: lib{{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/xiph/{{ name }}/archive/{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  patches:
-    - add_libm_to_flac.patch          # [linux]
-    - add_libm_to_metaflac.patch      # [linux]
-    - add_libm_to_test_streams.patch  # [linux]
-    - fix_pkgconfig.patch
 
 build:
-  number: 1
+  number: 0
   run_exports:
     - {{ pin_subpackage('libflac', max_pin='x.x') }}
 
@@ -43,17 +37,20 @@ test:
     - if not exist %LIBRARY_BIN%\\FLAC++.dll exit 1   # [win]
     - if not exist %LIBRARY_LIB%\\FLAC.lib exit 1     # [win]
     - if not exist %LIBRARY_BIN%\\FLAC.dll exit 1     # [win]
+    - flac --version                                  # [build_platform == target_platform]
 
 about:
   home: https://www.xiph.org/
   license: BSD-3-Clause
   license_family: BSD
   license_file: COPYING.Xiph
-  summary: "Flac audio format"
+  summary: Flac audio format
   description: Free Lossless Audio Codec.
   doc_url: https://wiki.xiph.org/
+  dev_url: https://gitlab.xiph.org/xiph/flac
 
 extra:
   recipe-maintainers:
     - dschreij
     - martinRenou
+    - matthiasdiener
