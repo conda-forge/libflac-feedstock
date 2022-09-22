@@ -1,6 +1,6 @@
 {% set name = "flac" %}
-{% set version = "1.4.0" %}
-{% set sha256 = "879545395b64c4a9f1ea17ba1b4230fee1c439283b4f692d2f41b48dfcb825a4" %}
+{% set version = "1.4.1" %}
+{% set sha256 = "acbb966abaaf3f65b6f37f0f40130d061d2bfa6a0212366466a416f221567878" %}
 
 package:
   name: lib{{ name|lower }}
