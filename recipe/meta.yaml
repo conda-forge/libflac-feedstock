@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage('libflac', max_pin='x.x') }}
 
@@ -24,10 +24,8 @@ requirements:
     - make  # [unix]
     - pandoc  # [not ppc64le]
   host:
-    - gettext  # [unix]
-    - libogg 1.3.*
-  run:
-    - libogg 1.3.*
+    - libintl-devel  # [unix]
+    - libogg
 
 test:
   commands:
