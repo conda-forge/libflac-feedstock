@@ -24,7 +24,7 @@ requirements:
     - make  # [unix]
     - pandoc  # [not ppc64le]
   host:
-    - libiconv # [unix]
+    - libiconv  # [unix]
     - libogg
 
 test:
